@@ -15,7 +15,7 @@ public class BookDaoImpl implements BookDao {
 
 
     @Override
-    @Cacheable("books")
+    @Cacheable(value = "book")
     public Book getById(String id) {
         simulateSlowService();
         return new Book(id,"解忧杂货店", "0.01");

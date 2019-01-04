@@ -16,24 +16,24 @@ import javax.annotation.Resource;
 @Component
 public class BookRunner implements CommandLineRunner {
 
-//    @Resource
-//    BookDao bookDao;
+    @Resource
+    BookDao bookDao;
 
-    private final BookDao bookDao;
+//    private final BookDao bookDao;
 
-    public BookRunner(BookDao bookDao) {
-        this.bookDao = bookDao;
-    }
+//    public BookRunner(BookDao bookDao) {
+//        this.bookDao = bookDao;
+//    }
 
     @Override
     public void run(String... args) throws Exception {
         log.info(".... Fetching books");
         log.info("1 -->" + bookDao.getById("1"));
         log.info("2 -->" + bookDao.getById("2"));
-        log.info("3 -->" + bookDao.getById("3"));
-        log.info("4 -->" + bookDao.getById("4"));
-        log.info("5 -->" + bookDao.getById("5"));
-        log.info("6 -->" + bookDao.getById("6"));
+        log.info("1 -->" + bookDao.getById("1"));
+        log.info("1 -->" + bookDao.getById("1"));
+        log.info("2 -->" + bookDao.getById("2"));
+        log.info("1 -->" + bookDao.getById("1"));
 
     }
 }

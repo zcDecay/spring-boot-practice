@@ -7,3 +7,6 @@ Spring Boot 为我们自动配置了
     azelcastCacheConfiguration、GuavaCacheConfiguration、
     RedisCacheConfiguration、SimpleCacheConfiguration 等。
 在我们不使用其他第三方缓存依赖的时候，springboot自动采用ConcurrenMapCacheManager作为缓存管理器。
+
+@EnableCaching ： 主启动类上添加改注解，开启缓存
+@Cacheable(value = "book") ： 在添加缓存的类/方法上添加，添加到缓存中
