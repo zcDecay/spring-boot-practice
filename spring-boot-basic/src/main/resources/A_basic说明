@@ -1,0 +1,23 @@
+启动SpringBoot方式
+    1、cd project 根目录
+    2、mvn clean
+    3、mvn package 编译项目的jar
+    4、mvn springboot:run 启动
+    5、cd 到target目录，java -jar 项目.jar
+单元测试：
+    通过@RunWith() @SpringBootTest开启注解
+    使用该@ConfigurationProperties注解需要添加
+    添加该注解指定配置文件@PropertySource(value = "classpath:test.properties")
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+多环境配置文件：
+    application-test.properties：测试环境
+    application-dev.properties：开发环境
+    application-prod.properties：生产环境
+    使用配置文件
+        spring:
+          profiles:
+            active: dev
